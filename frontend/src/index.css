@@ -1,3 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+  .animate-gradient {
+    background-size: 400%;
+    -webkit-animation: gradient 8s ease infinite;
+    animation: gradient 8s ease infinite;
+  }
+  
+  .glass-effect {
+    @apply bg-opacity-20 backdrop-blur-lg bg-gray-800 border border-gray-700/30;
+  }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.nav-link {
+  @apply px-4 py-2 rounded-lg text-gray-300 hover:text-white transition-all duration-300
+         hover:bg-gray-700/50 hover:scale-105;
+}
+
+.btn-primary {
+  @apply px-6 py-3 rounded-lg font-semibold text-white
+         bg-gradient-to-r from-blue-500 to-purple-600
+         hover:from-blue-600 hover:to-purple-700
+         transition-all duration-300 transform hover:scale-105
+         focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50
+         shadow-lg hover:shadow-xl;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 rounded-lg font-semibold text-white
+         border-2 border-blue-500
+         hover:bg-blue-500/10
+         transition-all duration-300 transform hover:scale-105
+         focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500;
+}
+
+.section-padding {
+  @apply py-16 px-4 md:px-8;
+}

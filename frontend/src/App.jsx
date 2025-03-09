@@ -28,17 +28,17 @@ const App = () => {
   );
 
   const Navbar = () => (
-    <nav className="bg-gray-800 border-b border-gray-700 p-4">
+    <nav className="glass-effect sticky top-0 z-50 px-4 py-3">
       <div className="container mx-auto flex items-center justify-between">
-        <Link to="/">
+        <Link to="/" className="transform hover:scale-105 transition-transform duration-200">
           <Logo />
         </Link>
-        <div className="flex space-x-4">
-          <Link to="/" className="text-gray-300 hover:text-white transition">Home</Link>
-          <Link to="/code-review" className="text-gray-300 hover:text-white transition">Code Review</Link>
-          <Link to="/docs" className="text-gray-300 hover:text-white transition">Documentation</Link>
-          <Link to="/about" className="text-gray-300 hover:text-white transition">About</Link>
-          <Link to="/contact" className="text-gray-300 hover:text-white transition">Contact</Link>
+        <div className="flex space-x-2">
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/code-review" className="nav-link">Code Review</Link>
+          <Link to="/docs" className="nav-link">Documentation</Link>
+          <Link to="/about" className="nav-link">About</Link>
+          <Link to="/contact" className="nav-link">Contact</Link>
         </div>
       </div>
     </nav>
@@ -46,15 +46,17 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div className="flex flex-col h-screen w-screen bg-gray-900">
+      <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 animate-gradient">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/code-review" element={<CodeReview />} />
-          <Route path="/docs" element={<Documentation />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/code-review" element={<CodeReview />} />
+            <Route path="/docs" element={<Documentation />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
       </div>
     </BrowserRouter>
   )
