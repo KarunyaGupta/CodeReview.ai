@@ -126,7 +126,7 @@ We welcome contributions to Code Review AI! Here's how you can help:
 
 ## 📞 Contact
 
-- Email: rishugoyal290404@gmail.com
+- Email: mail.karunyagupta@gmail.com
 - Address: Chitkara University
 
 ## 🙏 Acknowledgments
