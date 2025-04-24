@@ -33,7 +33,7 @@ const Contact = () => {
                             className="flex items-center space-x-4 p-4 rounded-lg hover:bg-gray-700/30 transition-all duration-300"
                         >
                             <span className="font-semibold text-blue-400">Email:</span>
-                            <a href="mailto:rishugoyal290404@gmail.com"
+                            <a href="mailto:mails.karunyagupta@gmail.com"
                                 className="hover:text-blue-400 transition-colors">
                                 mails.karunyagupta@gmail.com
                             </a>
